@@ -11,7 +11,7 @@
 def call()
 {
 
-import jenkins.model.*
+
 import java.util.regex.Pattern
 import java.util.Date
 
