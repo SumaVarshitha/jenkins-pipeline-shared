@@ -8,7 +8,8 @@
   ]
 } END META**/
 
-
+def call()
+{
 
 import jenkins.model.*
 import java.util.regex.Pattern
@@ -45,3 +46,4 @@ jobs.each { job ->
 }
 
 println "\nDeleted ${count} jobs.\n"
+}
