@@ -1,4 +1,6 @@
-import jenkins.model.Jenkins
+def call(String msg = 'deletepreviousbuilds'){
+  echo "${msg}"
+  import jenkins.model.Jenkins
 import hudson.model.Job
 
 MAX_BUILDS = 20
@@ -14,5 +16,6 @@ for (job in Jenkins.instance.items) {
       // build.delete()
     }
   }
+}
 }
 
