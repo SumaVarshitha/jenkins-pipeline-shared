@@ -17,7 +17,7 @@ def deleteOldBuilds(item, Integer numberOfBuildsToKeep, Integer numberOfSuccessf
     def count = 1
 
     println('Checking for Old Builds...')
-    when(true){
+    
     for (build in item.getBuilds()) {
         if(count++ >= numberOfBuildsToKeep) {
             if(item.getBuildStatusIconClassName() == 'icon-blue' && numberOfSuccessfulBuildsKept == 0) {
@@ -32,7 +32,7 @@ def deleteOldBuilds(item, Integer numberOfBuildsToKeep, Integer numberOfSuccessf
     }
     println('PRIOR BUILD COUNT: (' + count + ')')
     println ''
-    }
+    
 }
 
 def listJobObjects(item, Integer numberOfBuildsToKeep, Integer numberOfSuccessfulBuildsKept) {
