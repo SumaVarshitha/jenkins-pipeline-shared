@@ -12,8 +12,8 @@ def call()
 {
 
 
-import java.util.regex.Pattern
-import java.util.Date
+//import java.util.regex.Pattern
+//import java.util.Date
 
 jenkins = Jenkins.instance
 
