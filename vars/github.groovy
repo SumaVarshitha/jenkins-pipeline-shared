@@ -25,7 +25,7 @@ def call(String repository, String revision, String tag,
     git fetch origin
     git checkout ${revision}
     git tag ${tag}
-    git push --tags 'https://${gitlab}:${git123}@github.com/${example}.git'
+    git push --tags 'https://${gitlab}:${git123}@github.com/${ShellScripting}.git'
     """
   }
 
