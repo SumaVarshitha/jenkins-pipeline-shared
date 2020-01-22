@@ -23,8 +23,8 @@ def call(String repository, String revision, String tag,
     git init
     git remote add origin https://github.com/${ShellScripting}.git
     git fetch origin
-    git checkout ${revision}
-    git tag ${tag}
+    git checkout ${master}
+    git tag ${git checkout}
     git push --tags 'https://${gitlab}:${git123}@github.com/${ShellScripting}.git'
     """
   }
