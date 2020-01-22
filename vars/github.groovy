@@ -21,7 +21,7 @@ def call(String repository, String revision, String tag,
     mkdir ${temp}
     cd ${temp}
     git init
-    git remote add origin https://github.com/${example}.git
+    git remote add origin https://github.com/${ShellScripting}.git
     git fetch origin
     git checkout ${revision}
     git tag ${tag}
