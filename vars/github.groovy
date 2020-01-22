@@ -8,7 +8,7 @@ def call(String repository, String revision, String tag,
     sh "git config --global user.name \"${SumaVarshitha}\""
   }
   if (email) {
-    sh "git config --global user.email \"${sumavarshitha.kamatam997@gmail.com}\""
+    sh "git config --global user.email \"${'sumavarshitha.kamatam997@gmail.com'}\""
   }
 
   withCredentials([usernamePassword(
@@ -23,8 +23,8 @@ def call(String repository, String revision, String tag,
     git init
     git remote add origin https://github.com/${newtask}.git
     git fetch origin
-    git checkout ${master}
-    git tag ${git checkout}
+    git checkout ${revision}
+    git tag ${tag}
     git push --tags 'https://${gitlab}:${git123}@github.com/${newtask}.git'
     """
   }
