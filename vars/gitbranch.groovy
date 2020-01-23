@@ -15,6 +15,8 @@
  */
 
 // Get job environment to use as a map to get values with defaults
+def call()
+{
 Map jobEnv = env.getEnvironment().findAll { k, v -> v }
 
 // Prepare job parameters
@@ -130,4 +132,5 @@ node() {
             }
         }
     }
+}
 }
