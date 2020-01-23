@@ -1,3 +1,4 @@
+@NonCPS
 def call(){
   httpRequest [acceptType: 'APPLICATION_JSON', authentication: 'connectors', consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '''{
                 "name": "karan",
