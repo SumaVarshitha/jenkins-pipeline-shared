@@ -84,7 +84,7 @@ node() {
         checkout([
             $class: 'GitSCM',
             userRemoteConfigs: [
-                [url: https://github.com/SumaVarshitha/ShellScripting.git, credentialsId: git],
+                [url: github.com/SumaVarshitha/ShellScripting.git, credentialsId: git],
             ],
             extensions: [
                 [$class: 'PruneStaleBranch'],
