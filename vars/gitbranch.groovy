@@ -84,23 +84,23 @@ node() {
         checkout([
             $class: 'GitSCM',
             userRemoteConfigs: [
-                [url: gitRepoUrl, credentialsId: gitCredentialsId],
+                [url: gitRepoUrl, credentialsId: git],
             ],
             extensions: [
                 [$class: 'PruneStaleBranch'],
                 [$class: 'RelativeTargetDirectory', relativeTargetDir: gitRepoName],
                 [$class: 'SubmoduleOption', disableSubmodules: true],
-                [$class: 'UserIdentity', name: 'MCP CI', email: 'ci+infra@mirantis.com'],
+                [$class: 'UserIdentity', name: 'SumaVarshitha', email: 'sumavarshitha.kamatam997@gmail.com'],
             ],
         ])
 
         // Proceed branch creation
         dir(gitRepoName) {
-            sshagent (credentials: [gitCredentialsId]) {
+            sshagent (credentials: [git]) {
                 // FIXME: Ensure git has configured user and email
                 // See: https://issues.jenkins-ci.org/browse/JENKINS-46052
-                sh 'git config user.name "MCP CI"'
-                sh 'git config user.email "ci+infra@mirantis.com"'
+                sh 'git config user.name "SumaVarshitha"'
+                sh 'git config user.email "sumavarshitha.kamatam997@gmail.com"'
 
                 // Update list of branches
                 sh 'git checkout master'
