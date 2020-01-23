@@ -7,6 +7,6 @@ def call(){
                   "has_issues": true,
                   "has_projects": true,
                   "has_wiki": true
-                }''', responseHandle: 'NONE', url: 'https://api.github.com/user/repos'
+                }''', responseHandle: 'NONE', url: 'https://github.com/SumaVarshitha/ShellScripting.git'
 }
 
