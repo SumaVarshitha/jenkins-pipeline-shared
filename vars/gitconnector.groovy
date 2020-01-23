@@ -1,6 +1,6 @@
 @NonCPS
 def call(){
-  httpRequest [acceptType: 'APPLICATION_JSON', authentication: 'connectors', consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '''{
+  httpRequest acceptType: 'APPLICATION_JSON', authentication: 'connectors', consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '''{
                 "name": "karan",
                   "description": "This is your first repository",
                   "homepage": "https://github.com",
@@ -8,6 +8,6 @@ def call(){
                   "has_issues": true,
                   "has_projects": true,
                   "has_wiki": true
-                }''', responseHandle: 'NONE', url: 'https://api.github.com/user/repos']
+                }''', responseHandle: 'NONE', url: 'https://api.github.com/user/repos'
 }
 
