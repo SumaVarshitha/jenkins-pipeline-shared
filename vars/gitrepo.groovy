@@ -1,6 +1,6 @@
 def call(){
 sh '''
-curl POST /user/repos HTTP/1.1
+curl POST /user/repos
 Host: api.github.com
 Authorization: Basic U3VtYVZhcnNoaXRoYTpzdW1hc3VqaTI2OA==
 Accept: application/json
