@@ -26,7 +26,7 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'postman-token: 5d076930-9214-41a9-3383-0f081485a47a' \
   -d ' {
-                "name": "mani26",
+                "name": "bhavi",
                   "description": "This is your first repository",
                   "homepage": "https://github.com",
                   "private": false,
