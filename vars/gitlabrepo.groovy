@@ -1,7 +1,7 @@
 def call()
 {
 curl -X POST \
-  'https://gitlab.com/api/v4/projects?private_token=%0AravzJJcJ6ih-yrpchiLs' \
+''  'https://gitlab.com/api/v4/projects?private_token=%0AravzJJcJ6ih-yrpchiLs' \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpyYXZ6SkpjSjZpaC15cnBjaGlMcw==' \
   -H 'cache-control: no-cache' \
@@ -15,5 +15,5 @@ curl -X POST \
                   "has_issues": true,
                   "has_projects": true,
                   "has_wiki": true
-                }'
+                }'''
 }
