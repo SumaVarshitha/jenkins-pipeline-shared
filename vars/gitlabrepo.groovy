@@ -9,7 +9,7 @@ sh '''
   -H 'content-type: application/json' \
   -H 'postman-token: 284851de-59b0-f9e2-af1f-823acf4a7be8' \
   -d ' {
-                "name": "bhavya",
+                "name": "bhavi",
                   "description": "This is your first project",
                   "homepage": "https://gitlab.com",
                   "private": false,
