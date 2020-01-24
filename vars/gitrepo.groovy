@@ -1,5 +1,5 @@
 def call(){
-sh '''
+/*sh '''
 curl POST /user/repos
 Host: api.github.com
 Authorization: Basic U3VtYVZhcnNoaXRoYTpzdW1hc3VqaTI2OA==
@@ -17,4 +17,23 @@ Postman-Token: 8d7f2da6-f7d5-d428-8069-e7e1c146a15a
                   "has_wiki": true
                 }
                 '''
+*/
+ sh '''
+ curl POST /user/repos HTTP/1.1
+Host: api.github.com
+Authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==
+Accept: application/json
+Cache-Control: no-cache
+Postman-Token: c47f62e6-62e2-8704-389d-2c27ae2d8f7c
+
+ {
+                "name": "suma12",
+                  "description": "This is your first repository",
+                  "homepage": "https://github.com",
+                  "private": false,
+                  "has_issues": true,
+                  "has_projects": true,
+                  "has_wiki": true
+                }
+ '''
 }
