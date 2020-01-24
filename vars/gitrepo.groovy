@@ -19,14 +19,13 @@ Postman-Token: 8d7f2da6-f7d5-d428-8069-e7e1c146a15a
                 '''
 */
  sh '''
- curl POST /user/repos HTTP/1.1
-Host: api.github.com
-Authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==
-Accept: application/json
-Cache-Control: no-cache
-Postman-Token: c47f62e6-62e2-8704-389d-2c27ae2d8f7c
-
- {
+curl -X POST \
+  https://api.github.com/user/repos \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 5d076930-9214-41a9-3383-0f081485a47a' \
+  -d ' {
                 "name": "suma12",
                   "description": "This is your first repository",
                   "homepage": "https://github.com",
@@ -34,6 +33,6 @@ Postman-Token: c47f62e6-62e2-8704-389d-2c27ae2d8f7c
                   "has_issues": true,
                   "has_projects": true,
                   "has_wiki": true
-                }
- '''
+                }'
+                '''
 }
