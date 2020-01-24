@@ -16,5 +16,5 @@ sh '''curl -X POST \
                   "has_projects": true,
                   "has_wiki": true
                 }'
-                '''
+                ''
 }
