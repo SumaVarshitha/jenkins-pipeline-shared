@@ -1,6 +1,6 @@
 def call(){
 sh '''
-POST /user/repos HTTP/1.1
+-X POST /user/repos HTTP/1.1
 Host: api.github.com
 Authorization: Basic U3VtYVZhcnNoaXRoYTpzdW1hc3VqaTI2OA==
 Accept: application/json
