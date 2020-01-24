@@ -10,5 +10,5 @@ sh 'curl -X POST -v --user SumaVarshitha:sumasuji268 -H "ContentType: applicatio
                 }'''
 
 
- "https://api.github.com/user/repos" -d {"name":"varshi"}'
+ "https://api.github.com/user/repos"'
 }
