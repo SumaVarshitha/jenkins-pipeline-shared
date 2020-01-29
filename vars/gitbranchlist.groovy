@@ -1,3 +1,6 @@
 def call(){
-sh 'curl -v --user SumaVarshitha:sumasuji268 -H "ContentType: application/json; charset=UTF-8"  https://api.github.com/repos/user/jenkins-pipeline-shared/branches'
+curl -X GET \
+  https://api.github.com/repos/SumaVarshitha/jenkins-pipeline-shared/branches \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 2e6c08e1-f5db-81c6-6c41-9cdee376cea4'
 }
