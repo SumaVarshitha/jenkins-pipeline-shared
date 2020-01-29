@@ -16,5 +16,7 @@ curl -X POST \
   "developers_can_push": false,
   "developers_can_merge": false,
   "can_push": true
-  '''
+
 }'
+'''
+}
