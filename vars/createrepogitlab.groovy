@@ -16,5 +16,5 @@ httpRequest authentication: 'git', contentType: 'APPLICATION_JSON', customHeader
 }
 def call(){
 def request = libraryResource 'data.json'
-createrepogitlab(request)
+createrepo(request)
 }
