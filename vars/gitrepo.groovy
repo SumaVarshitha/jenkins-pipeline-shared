@@ -1,23 +1,12 @@
-def call(){
-/*sh '''
-curl POST /user/repos
-Host: api.github.com
-Authorization: Basic U3VtYVZhcnNoaXRoYTpzdW1hc3VqaTI2OA==
-Accept: application/json
-Cache-Control: no-cache
-Postman-Token: 8d7f2da6-f7d5-d428-8069-e7e1c146a15a
+import groovy.json.JsonSlurper 
 
- {
-                "name": "sum",
-                  "description": "This is your first repository",
-                  "homepage": "https://github.com",
-                  "private": false,
-                  "has_issues": true,
-                  "has_projects": true,
-                  "has_wiki": true
-                }
-                '''
-*/
+@NonCPS
+createRepo(String data){
+def jsonSlurper = new JsonSlurper() 
+def resultJson = jsonSlurper.parseText(data)
+def repoName = resultJson.name
+//def projUrl = resultJson.url
+//def projUrl = resultJson.url
  sh '''
 curl -X POST \
   https://api.github.com/user/repos \
@@ -26,7 +15,7 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'postman-token: 5d076930-9214-41a9-3383-0f081485a47a' \
   -d ' {
-                "name": "bhavi",
+                "name": "${repoName}",
                   "description": "This is your first repository",
                   "homepage": "https://github.com",
                   "private": false,
@@ -36,3 +25,8 @@ curl -X POST \
                 }'
                 '''
 }
+def call(){
+def request = libraryResource 'data.json'
+createRepo(request)
+}
+
