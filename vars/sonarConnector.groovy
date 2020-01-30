@@ -9,8 +9,8 @@ def call(ProjectKey,ProjectName,QualityGateName,GateId,ProjectId)
   //Quality Gate
   sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/create?name=${QualityGateName}"
   sh "curl -X GET http://3.16.33.107:9000/api/qualitygates/list"
-  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/create_condition?gateId=$x&metric=blocker_violations&op=GT&warning=5&error=10"
-  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/create_condition?gateId=$x&metric=critical_violations&op=GT&warning=5&error=10"
-  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/select?gateId=$x&projectId=$y"
+  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/create_condition?gateId=x&metric=blocker_violations&op=GT&warning=5&error=10"
+  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/create_condition?gateId=x&metric=critical_violations&op=GT&warning=5&error=10"
+  sh "curl -u admin:admin -X POST http://3.16.33.107:9000/api/qualitygates/select?gateId=x&projectId=y"
 //sh 'curl -u admin:admin -X POST "http://3.16.33.107:9000/api/qualitygates/select_as_default?id=1"'
 }
