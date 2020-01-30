@@ -15,7 +15,7 @@ def projUrl = resultJson.url
 }""", responseHandle: 'NONE', url: "${projUrl}"
 }
 def call(){
-def request = libraryResource 'data.json'
+def request = libraryResource 'gitdata.json'
 createRepo(request)
 }
 
