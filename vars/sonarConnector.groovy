@@ -2,7 +2,7 @@ def call(ProjectKey,ProjectName,QualityGateName,GateId,ProjectId)
 {
   echo "$ProjectName"
   //int x=Integer.parseInt("GateId");
-   echo "GateId"
+   echo "$GateId"
   //int y=Integer.parseInt("ProjectId");
 //Creating Project in Sonar
   sh "curl -u admin:admin -X POST http://ec2-3-16-33-107.us-east-2.compute.amazonaws.com:9000/api/projects/create?key=${ProjectKey}&name=${ProjectName}"
