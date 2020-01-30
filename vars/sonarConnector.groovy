@@ -1,4 +1,4 @@
-def call(ProjectKey,ProjectName,QualityGateName,x,y)
+def call(ProjectKey,ProjectName,QualityGateName,GateId,ProjectId)
 {
   echo "$ProjectName"
   int x=Integer.parseInt("GateId");
