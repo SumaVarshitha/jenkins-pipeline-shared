@@ -1,5 +1,7 @@
 {
 "gname":"Repo147",
- "curl":"https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs"
- "gcurl":"https://gitlab.com/api/v4/projects"
+ "gurl":"https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs",
+ "gcurl":"https://gitlab.com/api/v4/projects",
+ "glname":"repo147",
+"glurl":"https://api.github.com/user/repos"
 }
