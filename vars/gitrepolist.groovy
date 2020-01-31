@@ -11,7 +11,7 @@ httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHea
 }""", responseHandle: 'NONE', url: "${projUrl}"
 }
 def call(){
-def request = libraryResource 'githubcollector.json'
+def request = libraryResource 'data.json'
 createRepo(request)
 }
 /*def call(){
