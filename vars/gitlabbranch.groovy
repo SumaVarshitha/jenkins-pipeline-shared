@@ -2,7 +2,7 @@ def call()
 {
 sh '''
 curl -X POST \
-  'https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs&%2F15483041%2Frepository%2Fbranches%3Fbranch=newbranch&ref=master' \
+  'https://gitlab.com/api/v4/projects?private_token=VkjgB4Jdbaswh7FNXeC-&%2F15483041%2Frepository%2Fbranches%3Fbranch=newbranch&ref=master' \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpyYXZ6SkpjSjZpaC15cnBjaGlMcw==' \
   -H 'cache-control: no-cache' \
