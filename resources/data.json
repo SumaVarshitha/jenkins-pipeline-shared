@@ -1,4 +1,5 @@
 {
-"name":"Repo147",
- "url":"https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs"
+"gname":"Repo147",
+ "curl":"https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs"
+ "gcurl":"https://gitlab.com/api/v4/projects"
 }
