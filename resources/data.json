@@ -1,8 +1,8 @@
 {
 "gname":"Repo148",
  "glurl":"https://gitlab.com/api/v4/projects?private_token=ravzJJcJ6ih-yrpchiLs",
- "gcurl":"https://gitlab.com/api/v4/projects",
- "glname":"repo148",
-"glurl":"https://api.github.com/user/repos",
+ "glcurl":"https://gitlab.com/api/v4/projects",
+ "glname":"Repo148",
+"gcurl":"https://api.github.com/user/repos",
  "gurl":"https://api.github.com/users/SumaVarshitha/repos"
 }
