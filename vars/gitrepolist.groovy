@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper 
+/*import groovy.json.JsonSlurper 
 
 @NonCPS
 createRepo(String data){
@@ -13,9 +13,9 @@ httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHea
 def call(){
 def request = libraryResource 'data.json'
 createRepo(request)
-}
-/*def call(){
+}*/
+def call(){
   
 sh 'curl -v --user SumaVarshitha:sumasuji268 -H "ContentType: application/json; charset=UTF-8"  https://api.github.com/users/SumaVarshitha/repos'
 
-}*/
+}
