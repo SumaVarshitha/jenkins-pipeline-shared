@@ -9,5 +9,5 @@ def call(message)
  def resultJson = jsonSlurper.parseText(request)
  def projectName = resultJson.glname
   Date date = new Date() 
-  sh " echo '${date}' gitlabproject with  '${projectName}' ${message} >>log.txt"
+  sh " echo '${date}' gitlabproject with the projectname '${projectName}' ${message} >>log.txt"
 }
