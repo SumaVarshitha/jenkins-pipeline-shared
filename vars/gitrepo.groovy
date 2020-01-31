@@ -4,8 +4,8 @@ import groovy.json.JsonSlurper
 createRepo(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
-def repoName = resultJson.name
-def projUrl = resultJson.url
+def repoName = resultJson.gname
+def projUrl = resultJson.gurl
 //def projUrl = resultJson.url
  httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
@@ -15,7 +15,7 @@ def projUrl = resultJson.url
 }""", responseHandle: 'NONE', url: "${projUrl}"
 }
 def call(){
-def request = libraryResource 'gitdata.json'
+def request = libraryResource 'data.json'
 createRepo(request)
 }
 
