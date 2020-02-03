@@ -1,6 +1,6 @@
 def call()
 {
-sh '''
+sh /*'''
 curl -X POST \
   'https://gitlab.com/api/v4/projects?private_token=VkjgB4Jdbaswh7FNXeC-&%2F15483041%2Frepository%2Fbranches%3Fbranch=newbranch&ref=master' \
   -H 'accept: application/json' \
@@ -18,5 +18,8 @@ curl -X POST \
   "can_push": true
 
 }'
-'''
+'''*/
+  
+  'curl --header "PRIVATE-TOKEN: VkjgB4Jdbaswh7FNXeC-" https://gitlab.com/api/v4/projects/15483041/repository/branches?branch=newbranch&ref=master'
+
 }
