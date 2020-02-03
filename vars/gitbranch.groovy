@@ -9,7 +9,7 @@ def call()
   -H 'content-type: application/json' \
   -H 'postman-token: 8aee7eca-0e7f-361c-6be6-9f3bfbd1f0df' \
   -d '{
-   "ref": "refs/heads/dev",
+   "ref": "refs/heads/release",
    
   "sha": "8233111fce0f7fabab8753406eaf72d61b15a7ae"
 
