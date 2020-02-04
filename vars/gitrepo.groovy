@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper 
+/*import groovy.json.JsonSlurper 
 
 @NonCPS
 createRepo(String data){
@@ -17,5 +17,18 @@ def projUrl = resultJson.gurl
 def call(){
 def request = libraryResource 'data.json'
 createRepo(request)
+}*/
+def call(jsondata){
+ def jsonString = jsondata
+println(jsonString)
+def jsonObj = readJSON text: jsonString
+ def repoName = jsonObj.gname
+ def projUrl = jsonObj.url
+ httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
+{
+    "name": "${repoName}",
+    "scmId": "git",
+    "forkable": true
+}""", responseHandle: 'NONE', url: "${projUrl}"
 }
-
+ 
