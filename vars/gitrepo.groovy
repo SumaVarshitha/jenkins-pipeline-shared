@@ -20,15 +20,26 @@ createRepo(request)
 }*/
 def call(jsondata){
  def jsonString = jsondata
-println(jsonString)
+//println(jsonString)
 def jsonObj = readJSON text: jsonString
- def repoName = jsonObj.gname
- def projUrl = jsonObj.url
+println(jsonObj.scm)
+
+//String a=jsonObj.alm.projects.project.project_name
+String a=jsonObj.scm.repositories.repository.repo_name
+String projectName=a.replaceAll("\\[", "").replaceAll("\\]","");
+
+env.name = repoName
+
+
+//sh "rm -rf Text.xml"
+ println(a)
+ println(repoName)
+
  httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
     "name": "${repoName}",
     "scmId": "git",
     "forkable": true
-}""", responseHandle: 'NONE', url: "${projUrl}"
+}""", responseHandle: 'NONE', url: "https://api.github.com/users/SumaVarshitha/repos"
 }
  
