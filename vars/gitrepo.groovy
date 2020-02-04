@@ -40,6 +40,6 @@ env.name = repoName
     "name": "${repoName}",
     "scmId": "git",
     "forkable": true
-}""", responseHandle: 'NONE', url: "https://api.github.com/users/user/repos"
+}""", responseHandle: 'NONE', url: "https://api.github.com/user/repos"
 }
  
