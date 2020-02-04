@@ -22,7 +22,7 @@ curl -X POST \
   
  sh '''
  curl -X POST \
-  'https://gitlab.com/api/v4/projects/15483041/repository/branches?private_token=VkjgB4Jdbaswh7FNXeC-&branch=fef&ref=master' \
+  'https://gitlab.com/api/v4/projects/15483041/repository/branches?private_token=VkjgB4Jdbaswh7FNXeC-&branch=suma&ref=master' \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpWa2pnQjRKZGJhc3doN0ZOWGVDLQ==' \
   -H 'cache-control: no-cache' \
