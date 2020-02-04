@@ -26,7 +26,7 @@ println(jsonObj.scm)
 
 //String a=jsonObj.alm.projects.project.project_name
 String a=jsonObj.scm.repositories.repository.repo_name
-String projectName=a.replaceAll("\\[", "").replaceAll("\\]","");
+String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
 
 env.name = repoName
 
