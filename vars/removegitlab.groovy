@@ -2,7 +2,7 @@ def call()
 {
 sh '''
 curl -X DELETE \
-  'https://gitlab.com/api/v4/projects/16674665?%0Aprivate_token=VkjgB4Jdbaswh7FNXeC-' \
+  'https://gitlab.com/api/v4/projects/16691253?%0Aprivate_token=VkjgB4Jdbaswh7FNXeC-' \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpWa2pnQjRKZGJhc3doN0ZOWGVDLQ==' \
   -H 'cache-control: no-cache' \
