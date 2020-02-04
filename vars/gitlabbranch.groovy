@@ -20,6 +20,14 @@ curl -X POST \
 }'
 '''*/
   
- sh 'curl --header "PRIVATE-TOKEN: VkjgB4Jdbaswh7FNXeC-" https://gitlab.com/api/v4/projects/15483041/repository/branches?branch=feature&ref=master'
+ sh '''
+ curl -X POST \
+  'https://gitlab.com/api/v4/projects/15483041/repository/branches?private_token=VkjgB4Jdbaswh7FNXeC-&branch=fef&ref=master' \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpWa2pnQjRKZGJhc3doN0ZOWGVDLQ==' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 7b560c12-dcfe-5768-bacb-705b94d4e677'
+  '''
 
 }
