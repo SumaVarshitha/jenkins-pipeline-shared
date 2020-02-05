@@ -37,21 +37,11 @@ String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
  println(a)
  println(repoName)
 println(branchName)
- sh '''
-    curl -X POST \
-  https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
-  -H 'accept: application/json' \
-  -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 8aee7eca-0e7f-361c-6be6-9f3bfbd1f0df' \
-  -d '{
-   "ref": "refs/heads/${branchName}",
-   
-  "sha": "8233111fce0f7fabab8753406eaf72d61b15a7ae"
-
-   
- }'
- '''
+httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
+{
+    "branchname": "${repoName}",
+    "scmId": "git",
+    "forkable": true
+}""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/repoName/git/refs"
 }
  
