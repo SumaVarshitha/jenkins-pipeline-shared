@@ -47,6 +47,6 @@ sh "git branch '${branchName}' '${branchPath}'"
                 sh "git push --force origin '${branchName}'"  
     
    
-}""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/repoName/git/refs"
+}""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs"
 }
  
