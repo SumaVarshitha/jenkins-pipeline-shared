@@ -39,9 +39,11 @@ String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 println(branchName)
 httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
-    "branchname": "${repoName}",
-    "scmId": "git",
-    "forkable": true
+"ref": "refs/heads/branchName",
+   
+  "sha": "8233111fce0f7fabab8753406eaf72d61b15a7ae"
+    
+   
 }""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/repoName/git/refs"
 }
  
