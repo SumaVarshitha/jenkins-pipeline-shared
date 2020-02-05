@@ -43,9 +43,10 @@ println(branchName)
     println(branchPath)
 httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
-sh "git branch '${branchName}' '${branchPath}'" 
-                sh "git push --force origin '${branchName}'"  
-    
+  
+    "ref": "refs/heads/release",
+   
+  "sha": "d2160fec95d3968d0b13ee669b0dbec1837579b1"
    
 }""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs"
 }
