@@ -28,10 +28,10 @@ env.name = repoName
 //sh "rm -rf Text.xml"
  println(a)
  println(repoName)
-sh '''
+sh """
 curl -X GET \
   https://api.github.com/repos/SumaVarshitha/${repoName}/branches \
   -H 'cache-control: no-cache' \
-  '''
+  """
  
 }
