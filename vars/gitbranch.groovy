@@ -36,7 +36,7 @@ String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 //sh "rm -rf Text.xml"
  println(a)
  println(repoName)
-
+println(branchName)
  sh '''
     curl -X POST \
   https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
