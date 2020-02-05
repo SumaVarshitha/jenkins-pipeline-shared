@@ -18,7 +18,7 @@ curl -X POST \
   "can_push": true
 
 }'
-'''*/
+'''
   
  sh '''
  curl -X POST \
@@ -30,4 +30,33 @@ curl -X POST \
   -H 'postman-token: 7b560c12-dcfe-5768-bacb-705b94d4e677'
   '''
 
+}*/
+def call(jsondata){
+ def jsonString = jsondata
+println(jsonString)
+def jsonObj = readJSON text: jsonString
+println(jsonObj.scm)
+
+//String a=jsonObj.alm.projects.project.project_name
+String a=jsonObj.scm.projects.project[1].branches.branch[0].name1
+String branchName=a.replaceAll("\\[", "").replaceAll("\\]","");
+
+
+
+//sh "rm -rf Text.xml"
+ println(a)
+ println(branchName)
+
+  sh """
+ curl -X POST \
+  'https://gitlab.com/api/v4/projects/15483041/repository/branches?private_token=VkjgB4Jdbaswh7FNXeC-&branch=${branchName}&ref=master' \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpWa2pnQjRKZGJhc3doN0ZOWGVDLQ==' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 7b560c12-dcfe-5768-bacb-705b94d4e677'
+  """
+
 }
+}
+ 
