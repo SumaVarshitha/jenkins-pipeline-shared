@@ -31,12 +31,16 @@ String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.scm.repositories.repository.branches.branch.name
 String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 
+String c=jsonObj.scm.repositories.repository.branches.startPoint
+String branchPath=c.replaceAll("\\[", "").replaceAll("\\]","");
+
 
 
 //sh "rm -rf Text.xml"
  println(a)
  println(repoName)
 println(branchName)
+    println(branchPath)
 httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
 sh "git branch '${branchName}' '${branchPath}'" 
