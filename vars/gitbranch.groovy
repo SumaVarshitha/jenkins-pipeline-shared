@@ -9,7 +9,7 @@ def resultJson = jsonSlurper.parse(reader)
 def branchSha = resultJson[0].commit.sha
     sh """
     curl -X POST \
-  https://api.github.com/repos/SumaVarshitha/repoName/git/refs \
+  https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
   -H 'cache-control: no-cache' \
