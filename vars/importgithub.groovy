@@ -17,7 +17,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: b9d72abc-7904-2681-a8ab-39581681eba0' \
   -d '{
-"personal_access_token":"fe5dc482b82276e3eb836022683f7e6bee389d64",
+"personal_access_token":"ca760fed38c07b7110153305f79e45002b91eeee",
 "repo_id":${repoId},
 
 "target_namespace":"SumaVarshitha/abc"
