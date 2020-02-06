@@ -34,7 +34,7 @@ curl -X POST \
 import groovy.json.*
 
 @NonCPS
-create(String branchName){
+createBranch(String branchName){
 
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/gitcheckout/projectid.json"),"UTF-8"))
