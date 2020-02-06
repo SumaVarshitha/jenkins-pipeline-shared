@@ -17,10 +17,10 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: b9d72abc-7904-2681-a8ab-39581681eba0' \
   -d '{
-"personal_access_token":"c1cdd9e5378a66958fe79d5e5f9ccf0786cc3316",
+"personal_access_token":"fe5dc482b82276e3eb836022683f7e6bee389d64",
 "repo_id":${repoId},
 
-"target_namespace":"SumaVarshitha"
+"target_namespace":"SumaVarshitha/abc"
 
 }'
 """
