@@ -18,7 +18,7 @@ def branchSha = resultJson[0].commit.sha
   -d '{
    "ref": "refs/heads/branchName",
    
-  "sha": "branchSha"
+  "sha": "${branchSha}"
 
 
  }'
