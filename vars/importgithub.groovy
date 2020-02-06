@@ -18,9 +18,9 @@ curl -X POST \
   -H 'postman-token: b9d72abc-7904-2681-a8ab-39581681eba0' \
   -d '{
 /*"personal_access_token":"16ec73a2c93c123b9cf370cffe2f0929dd7254e0",*/
-"SumaVarshitha":"sumasuji268"
-"repo_id":${repoId},
 
+"repo_id":${repoId},
+"SumaVarshitha":"sumasuji268"
 "target_namespace":"SumaVarshitha/mani"
 
 }'
