@@ -31,7 +31,7 @@ env.name = repoName
 sh """
 curl -X GET \
   https://api.github.com/repos/SumaVarshitha/${repoName}/branches \
-  -H 'cache-control: no-cache' \
+  -H 'cache-control: no-cache' \ -o BranchSha.json
   """
  
 }
