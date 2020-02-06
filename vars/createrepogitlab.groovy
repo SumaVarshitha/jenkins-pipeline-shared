@@ -22,10 +22,10 @@ def call(jsondata){
  def jsonString = jsondata
 println(jsonString)
 def jsonObj = readJSON text: jsonString
-println(jsonObj.scm)
+println(jsonObj.scm2)
 
 //String a=jsonObj.alm.projects.project.project_name
-String a=jsonObj.scm.projects.project[0].proj_name
+String a=jsonObj.scm2.projects.project[0].proj_name
 String projName=a.replaceAll("\\[", "").replaceAll("\\]","");
 
 
