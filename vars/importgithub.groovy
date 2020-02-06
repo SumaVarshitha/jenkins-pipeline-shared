@@ -1,7 +1,8 @@
 import groovy.json.*
 
 @NonCPS
-import(){
+importRepo()
+{
 
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/gitcheckout/repo.json"),"UTF-8"))
@@ -27,5 +28,5 @@ curl -X POST \
 
 def call()
 {
-import()
+importRepo()
 }
