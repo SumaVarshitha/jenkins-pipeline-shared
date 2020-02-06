@@ -44,7 +44,7 @@ println(branchName)
 httpRequest authentication: 'github', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
   
-    "ref": "refs/heads/release",
+    "ref": "refs/heads/branchName",
    
   "sha": "d2160fec95d3968d0b13ee669b0dbec1837579b1"
    
