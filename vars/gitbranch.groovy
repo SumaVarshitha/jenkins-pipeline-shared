@@ -16,7 +16,7 @@ def branchSha = resultJson[0].commit.sha
   -H 'content-type: application/json' \
   -H 'postman-token: 8aee7eca-0e7f-361c-6be6-9f3bfbd1f0df' \
   -d '{
-   "ref": "refs/heads/branchName",
+   "ref": "refs/heads/${branchName}",
    
   "sha": "${branchSha}"
 
