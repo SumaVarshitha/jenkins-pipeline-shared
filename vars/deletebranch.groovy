@@ -16,9 +16,9 @@ def jsonObj = readJSON text: jsonString
 println(jsonObj.scm)
 
 //String a=jsonObj.alm.projects.project.project_name
-String a=jsonObj.scm.repositories.repository[1].name
+String a=jsonObj.scm.repositories.repository[2].name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.scm.repositories.repository[1].branches.branch[0].name1
+String b=jsonObj.scm.repositories.repository[2].branches.branch[0].name1
 String branchName=b.replaceAll("\\[", "").replaceAll("\\]","")
 
 
