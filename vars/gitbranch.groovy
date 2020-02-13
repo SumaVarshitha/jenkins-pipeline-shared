@@ -35,6 +35,9 @@ println(jsonObj.scm)
 String a=jsonObj.scm.repositories.repository[2].name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
     
+   for(int i = 0;i<5;i++) {
+         println(i);
+      }
 String b=jsonObj.scm.repositories.repository[2].branches.branch[0].name1
 String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 
