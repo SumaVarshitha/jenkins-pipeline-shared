@@ -38,7 +38,7 @@ String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
    for(int i = 0;i<3;i++) {
          
       
-String b=jsonObj.scm.repositories.repository[2].branches.branch[i].name1
+String b=jsonObj.scm.repositories.repository[2].branches.branch[i].name
 String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 //sh "rm -rf Text.xml"
