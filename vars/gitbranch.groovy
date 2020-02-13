@@ -35,10 +35,10 @@ println(jsonObj.scm)
 String a=jsonObj.scm.repositories.repository[2].name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
     
-   for(int i = 0;i<5;i++) {
-         println(i);
-      }
-String b=jsonObj.scm.repositories.repository[2].branches.branch[0].name1
+   for(int i = 0;i<3;i++) {
+         
+      
+String b=jsonObj.scm.repositories.repository[2].branches.branch[i].name1
 String branchName=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 //sh "rm -rf Text.xml"
@@ -55,5 +55,6 @@ println(branchName)
    
 }""", responseHandle: 'NONE', url: "https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs"*/
     createBranch(repoName,branchName)
+   }
 }
  
