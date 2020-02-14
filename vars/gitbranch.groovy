@@ -7,6 +7,9 @@ def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/gitcheckout/BranchSha.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 def branchSha = resultJson[0].commit.sha
+    	
+ 
+curl_setopt($chSt, CURLOPT_FAILONERROR, true);
     sh """
     curl -X POST \
   https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
@@ -23,6 +26,14 @@ def branchSha = resultJson[0].commit.sha
 
  }'
  """
+    	
+ 
+$httpstatus = curl_getinfo($chSt, CURLINFO_HTTP_CODE);
+    if(httpstatus== "200"){
+        echo "success"}
+    else
+        echo "fail"
+    
 }
 
 def call(jsondata){
