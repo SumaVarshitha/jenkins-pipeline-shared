@@ -10,7 +10,7 @@ def branchSha = resultJson[0].commit.sha
     	
  
 
-    $httpstatus= sh """
+    def httpstatus= sh """
    curl  -o /dev/null -w "%{http_code}"\
   https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
   -H 'accept: application/json' \
