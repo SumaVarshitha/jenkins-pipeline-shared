@@ -12,7 +12,7 @@ def branchSha = resultJson[0].commit.sha
 
     def httpstatus= sh """
    curl  -X POST -LI\
-  https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
+  https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs -o /dev/null -w '%{http_code}\n' -s\
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
   -H 'cache-control: no-cache' \
@@ -24,7 +24,7 @@ def branchSha = resultJson[0].commit.sha
   "sha": "${branchSha}"
 
 
- }'-o /dev/null -w '%{http_code}\n' -s
+ }'
  """
     	
  echo "httpstatus"
