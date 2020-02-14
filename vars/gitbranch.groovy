@@ -9,9 +9,9 @@ def resultJson = jsonSlurper.parse(reader)
 def branchSha = resultJson[0].commit.sha
     	
  
-curl_setopt($chSt, CURLOPT_FAILONERROR, true);
-    sh """
-    curl -X POST \
+
+    $httpstatus= sh """
+   curl -X POST -I -w "%{http_code}"\
   https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
@@ -28,7 +28,7 @@ curl_setopt($chSt, CURLOPT_FAILONERROR, true);
  """
     	
  
-$httpstatus = curl_getinfo($chSt, CURLINFO_HTTP_CODE);
+
     if(httpstatus== "200"){
         echo "success"}
     else
