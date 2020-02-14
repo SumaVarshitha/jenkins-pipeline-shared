@@ -29,10 +29,7 @@ def branchSha = resultJson[0].commit.sha
     	
  echo "httpstatus"
 
-    if(httpstatus== "200"){
-        echo "success"}
-    else
-        echo "fail"
+    
     
 }
 
