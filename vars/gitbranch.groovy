@@ -11,7 +11,7 @@ def branchSha = resultJson[0].commit.sha
  
 
     $httpstatus= sh """
-   curl -X POST  -w "%{http_code}"\
+   curl -I -w "%{http_code}"\
   https://api.github.com/repos/SumaVarshitha/${repoName}/git/refs \
   -H 'accept: application/json' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
