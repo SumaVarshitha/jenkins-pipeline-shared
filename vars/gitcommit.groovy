@@ -21,6 +21,7 @@ print "total no.of collaborators:" +result1
     def count = new String[100]
    for(int j=0;j<result1;j++)
    {
+      count[j]=0
    for(int i=0;i<result;i++){
       if((resultJson.commit.author.name[i]).equals( collab[j] ))
          count[j]++
