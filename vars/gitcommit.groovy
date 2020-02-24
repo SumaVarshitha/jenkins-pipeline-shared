@@ -18,7 +18,7 @@ print "total no.of collaborators:" +result1
       collab[i]=resultJson1[i].login
      
    }
-    	def count = new String[100]
+    /*	def count = new String[100]
    for(int j=0;j<result1;j++)
    {
    for(int i=0;i<result;i++){
@@ -34,7 +34,7 @@ print "total no.of collaborators:" +result1
     	
  
 
-    
+    */
     
 }
 def call()
