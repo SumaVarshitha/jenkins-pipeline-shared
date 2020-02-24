@@ -29,7 +29,7 @@ curl -X GET \
   
   
      
-   } ""'
+   } """
     def count = new String[100]
    for(int j=0;j<result1;j++)
    {
