@@ -14,7 +14,7 @@ def resultJson1 = jsonSlurper.parse(readera)
    int result1=resultJson1.login.size()
 print "total no.of collaborators:" +result1
     	def collab = new String[100]
-   for(int i=0;i<result1;i++){
+   for(int i=0;i<=result1;i++){
       
       collab[i]=resultJson1[i].login
       println(collab[i])
