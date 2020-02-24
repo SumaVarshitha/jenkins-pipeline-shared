@@ -18,7 +18,7 @@ print "total no.of collaborators:" +result1
       collab[i]=resultJson1[i].login
 sh """
 curl -X GET \
-  'https://api.github.com/repos/SumaVarshitha/game/commits?author=collab[i]' \
+  'https://api.github.com/repos/SumaVarshitha/game/commits?author[]=collab[i]' \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
   -H 'cache-control: no-cache' \
   -H 'postman-token: e89ade00-222a-ac9c-d259-7262600e2883' -o individual.json
