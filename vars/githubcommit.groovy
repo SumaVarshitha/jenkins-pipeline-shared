@@ -6,11 +6,13 @@ commitgit(){
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/commits.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-print "total no.of commits:" +resultJson.commit.size()
+   int result=resultJson.commit.size()
+print "total no.of commits:" +result
    
 def readera = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/collab.json"),"UTF-8"))
 def resultJson1 = jsonSlurper.parse(readera)
-print "total no.of collaborators:" +resultJson1.login.size()
+   int result1=resultJson1.login.size()
+print "total no.of collaborators:" +result1
     	
  
     	
