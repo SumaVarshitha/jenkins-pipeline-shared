@@ -6,7 +6,7 @@ commitgit(){
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/commits.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-println "total no.of commits:" 
+print "total no.of commits:" 
 print resultJson.commit.size()
     	
  
