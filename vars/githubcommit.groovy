@@ -1,7 +1,7 @@
 import groovy.json.*
 
 @NonCPS
-commit(String repoName,String branchName){
+commitgit(String repoName,String branchName){
 
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/commits.json"),"UTF-8"))
@@ -44,5 +44,5 @@ curl -X GET \
   -H 'cache-control: no-cache' \
   -H 'postman-token: f302bff6-fe11-93d8-d78d-e756d4a8c5b3' -o commits.json
   """ 
- commit()
+ commitgit()
   }
