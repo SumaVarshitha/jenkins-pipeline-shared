@@ -22,7 +22,7 @@ print "total no.of collaborators:" +result1
    for(int j=0;j<result1;j++)
    {
    for(int i=0;i<result;i++){
-      if(resultJson.commit.author.name[i].equals( collab[j] )
+      if((resultJson.commit.author.name[i]).equals( collab[j] )
          count[j]++
          }
          }
