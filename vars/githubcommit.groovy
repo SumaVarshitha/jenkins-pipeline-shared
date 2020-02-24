@@ -13,9 +13,9 @@ def readera = new BufferedReader(new InputStreamReader(new FileInputStream("/var
 def resultJson1 = jsonSlurper.parse(readera)
    int result1=resultJson1.login.size()
 print "total no.of collaborators:" +result1
-    	
+    	def collab[100]
    for(int i=0;i<result1;i++){
-      def collab[i]=result1[i].login
+      collab[i]=result1[i].login
       print collab[i]
    }
     	
