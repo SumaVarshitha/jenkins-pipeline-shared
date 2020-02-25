@@ -8,6 +8,7 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
    int result=resultJson.commit.size()
 print "total no.of commits:" +result
+   println resultJson
    
 def readera = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/collab.json"),"UTF-8"))
 def resultJson1 = jsonSlurper.parse(readera)
