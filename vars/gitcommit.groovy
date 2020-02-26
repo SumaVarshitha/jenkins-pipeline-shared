@@ -67,7 +67,7 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
    int result=resultJson.commit.size()
 print "total no.of commits:" +result
-   
+   println resultJson[0].commit.author.email
    int ecount = jsonObj.config.emails.email.size()
 println("No of users "+ ecount)
   List<String> JSON = new ArrayList<String>();
@@ -82,13 +82,13 @@ for(i=0;i<ecount;i++)
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
-	   JSON.add(JsonOutput.toJson(resultJson[j]))
+	  // JSON.add(JsonOutput.toJson(resultJson[j]))
    }
   }
  }
 	for(i=0;i<ecount;i++){
 		print jsonObj.config.emails.email[i] +" = "+count[i]
 	}
-   println(JSON)
+  // println(JSON)
  //commitgit()
   }
