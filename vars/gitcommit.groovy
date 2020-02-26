@@ -1,4 +1,4 @@
-/*import groovy.json.*
+import groovy.json.*
 
 @NonCPS
 commitgit(){
@@ -48,7 +48,7 @@ print "total no.of collaborators:" +result1
 
     
     
-}*/
+}
 def call()
 {
 /*def call(jsondata){
@@ -74,7 +74,7 @@ curl -X GET \
   https://api.github.com/repos/SumaVarshitha/game/commits \
   -H 'authorization: Basic c3VtYXZhcnNoaXRoYS5rYW1hdGFtOTk3QGdtYWlsLmNvbTpzdW1hc3VqaTI2OA==' \
   -H 'cache-control: no-cache' \
-  -H 'postman-token: f302bff6-fe11-93d8-d78d-e756d4a8c5b3' 
+  -H 'postman-token: f302bff6-fe11-93d8-d78d-e756d4a8c5b3' -o commits.json
   """ 
 sh """
 curl -X GET \
