@@ -82,13 +82,13 @@ for(i=0;i<ecount;i++)
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
-	  // JSON.add(JsonOutput.toJson(resultJson[j]))
+	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
   }
  }
 	for(i=0;i<ecount;i++){
 		print jsonObj.config.emails.email[i] +" = "+count[i]
 	}
-  // println(JSON)
+  println(JSON)
  //commitgit()
   }
