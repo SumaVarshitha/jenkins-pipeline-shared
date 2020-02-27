@@ -26,26 +26,23 @@ print "total no.of commits:" +result
 println("No of users "+ ecount)
   
 def count = new String[100]
-	
+	 List<String> JSON = new ArrayList<String>();
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
-	  List<String> JSON = new ArrayList<String>();
+	 
   for(j=0;j<result;j++)
   {
 	 
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
-	  JSON.add(JsonOutput.toJson(resultJson[j]))
+	  JSON[i].add(JsonOutput.toJson(resultJson[j]))
    }
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
-	const FileSystem = require("fs");
- FileSystem.writeFile(' jsonObj.config.emails.email[i].json', JSON.stringify(JSON), (err) => {
-    if (e) throw e;
-  });
- }
 	
+ }
+	print(JSON)
 
   }
