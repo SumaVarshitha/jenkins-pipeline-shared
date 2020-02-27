@@ -46,6 +46,6 @@ for(i=0;i<ecount;i++)
  }
 	
 
-	with open('data.json','w') 
-		json.dump(JSON,f)
+	var json = JSON.stringify(JSON);
+	println(json)
   }
