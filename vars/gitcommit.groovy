@@ -76,7 +76,7 @@ def count = new String[100]
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
-	 print jsonObj.config.emails.email[i] +" = "+count[i]
+	 
   for(j=0;j<result;j++)
   {
 	  
@@ -86,6 +86,7 @@ for(i=0;i<ecount;i++)
 	  print (JsonOutput.toJson(resultJson[j]))
    }
   }
+	 print jsonObj.config.emails.email[i] +" = "+count[i]
  }
 	
   //println(JSON)
