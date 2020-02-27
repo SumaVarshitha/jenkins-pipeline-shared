@@ -41,7 +41,10 @@ for(i=0;i<ecount;i++)
    }
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
-	 println(JSON)
+	const FileSystem = require("fs");
+ FileSystem.writeFile(' jsonObj.config.emails.email[i].json', JSON.stringify(JSON), (err) => {
+    if (e) throw e;
+  });
  }
 	
 
