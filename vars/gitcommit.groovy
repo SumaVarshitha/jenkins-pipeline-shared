@@ -1,50 +1,5 @@
 import groovy.json.*
-
-/*@NonCPS
-commitgit(){
-
-
-   println resultJson
-   
-def readera = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/collab.json"),"UTF-8"))
-def resultJson1 = jsonSlurper.parse(readera)
-   int result1=resultJson1.login.size()
-print "total no.of collaborators:" +result1
-   
-    	def collab = new String[100]
-   for(int i=0;i<result1;i++)
-   {
-   
-  
-      collab[i]=resultJson1[i].login
-      println(collab[i])
-      
-      
-   }
-  
-    def count = new String[100]
-   for(int j=0;j<result1;j++)
-   
-   {
-      
      
-      count[j]=0
-   for(int i=0;i<result;i++){
-      if((resultJson.commit.author.name[i]).equals( collab[j] ))
-         count[j]++
-         }
-         }
- 
-         for(int i=0;i<result1;i++){
-            println collab[i] +" = "+count[i]
-         }
- 
-    	
- 
-
-    
-    
-}*/
 def call(jsondata){
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
@@ -89,6 +44,5 @@ for(i=0;i<ecount;i++)
 	 println(JSON)
  }
 	
-  //println(JSON)
- //commitgit()
+
   }
