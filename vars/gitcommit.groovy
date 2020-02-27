@@ -1,4 +1,5 @@
 import groovy.json.*
+	
      
 def call(jsondata){
 def jsonString = jsondata
@@ -43,6 +44,8 @@ for(i=0;i<ecount;i++)
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	
  }
-	print(JSON)
-
+	
+import json
+	with open('data.json','w') as f:
+		json.dump(JSON,f)
   }
