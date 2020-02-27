@@ -46,6 +46,6 @@ for(i=0;i<ecount;i++)
  }
 	
 import json
-	with open('data.json','w') as f:
+	with open('data.json','w') 
 		json.dump(JSON,f)
   }
