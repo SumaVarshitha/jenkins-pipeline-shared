@@ -38,7 +38,7 @@ for(i=0;i<ecount;i++)
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
-	  JSON[i].add(JsonOutput.toJson(resultJson[j]))
+	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
