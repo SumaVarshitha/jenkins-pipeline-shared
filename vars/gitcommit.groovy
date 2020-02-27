@@ -70,7 +70,7 @@ print "total no.of commits:" +result
    println resultJson[0].commit.author.email
    int ecount = jsonObj.config.emails.email.size()
 println("No of users "+ ecount)
- // List<String> JSON = new ArrayList<String>();
+  
 def count = new String[100]
 	
 for(i=0;i<ecount;i++)
@@ -79,14 +79,15 @@ for(i=0;i<ecount;i++)
 	 
   for(j=0;j<result;j++)
   {
-	  
+	  List<String> JSON = new ArrayList<String>();
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
-	  print (JsonOutput.toJson(resultJson[j]))
+	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
+	 println(JSON)
  }
 	
   //println(JSON)
