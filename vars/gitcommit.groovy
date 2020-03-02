@@ -42,7 +42,7 @@ print "total no.of commits:" +result
 println("No of users "+ ecount)
  // def indiv = new String[100]
 def count = new String[100]
-	def a="bhavya"
+	def v="bhavya"
 	
 	//var Dispatch = new Dispatch();
 
@@ -75,7 +75,7 @@ for(i=0;i<ecount;i++)
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
  }
-	println(a)
+	println(v)
 	//println(Dispatch)
 	//for(int i=0;i<ecount;i++)
 	//println(indiv[i])
