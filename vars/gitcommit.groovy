@@ -69,7 +69,7 @@ for(i=0;i<ecount;i++)
 
 	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
-	  indiv[i]=JSON
+	  indiv[i]=JSON.stringify(JSON)
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
