@@ -29,6 +29,10 @@ println("No of users "+ ecount)
   
 def count = new String[100]
 	 List<String> JSON = new ArrayList<String>();
+	var Dispatch = new Dispatch();
+
+
+   var propertyDispatch = new Container();
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
@@ -39,12 +43,21 @@ for(i=0;i<ecount;i++)
    if(jsonObj.config.emails.email[i]==resultJson[j].commit.author.email)
    {
 	    count[i]++
+		    
+   propertyDispatch.Name = resultJson[j].commit.author.name.ToString();
+   propertyDispatch.Email = resultJson[j].commit.author.email.Container.ToString()
+
+   Dispatch.Container.Add(propertyDispatch);
+//.... Your other code
+
+}
+
 	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	
  }
-	
+	println(Dispatch)
 	println(JSON)
   }
