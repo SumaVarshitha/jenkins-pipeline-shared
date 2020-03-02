@@ -1,4 +1,5 @@
 import groovy.json.*
+import java.io.Serializable
 	/*def Container()
 	{
 		string ContainerId { get; set; }
