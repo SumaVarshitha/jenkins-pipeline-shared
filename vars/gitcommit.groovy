@@ -70,9 +70,10 @@ for(i=0;i<ecount;i++)
 
 	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
-	  indiv << JSON
+	 
 	 // v=JSON
   }
+	 indiv[i] ="${JSON}"
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
  }
