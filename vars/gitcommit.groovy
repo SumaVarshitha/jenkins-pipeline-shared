@@ -73,7 +73,7 @@ for(i=0;i<ecount;i++)
 	 
 	 // v=JSON
   }
-	 indiv << JSON
+	 indiv >> JSON
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
  }
