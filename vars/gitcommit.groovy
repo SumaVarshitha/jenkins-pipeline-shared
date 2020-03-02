@@ -50,7 +50,7 @@ for(i=0;i<ecount;i++)
    Dispatch.Container.Add(propertyDispatch);
 //.... Your other code
 
-}
+
 
 	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
