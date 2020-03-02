@@ -11,7 +11,7 @@ def Dispatch()
 		{
 			Container = new List<Container>();
 		}
-		List<Container> Container { get; set; }
+		List<Container>= Container { get; set; }
 	}
      
 def call(jsondata){
