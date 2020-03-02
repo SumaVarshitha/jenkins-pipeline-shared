@@ -22,7 +22,7 @@ def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/game/commits.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
    int result=resultJson.commit.size()
-	data["commits"].append({'total number of commits': 'result'})
+	data["commits"].append({'total number of commits' : 'result'})
 print "total no.of commits:" +result
    int ecount = jsonObj.config.emails.email.size()
 println("No of users "+ ecount)
