@@ -51,7 +51,7 @@ def count = new String[100]
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
-	indiv[i]=NULL
+	indiv[i]="NULL"
 	  List<String> JSON = new ArrayList<String>();
   for(j=0;j<result;j++)
   {
