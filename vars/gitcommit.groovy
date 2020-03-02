@@ -40,9 +40,9 @@ def resultJson = jsonSlurper.parse(reader)
 print "total no.of commits:" +result
    int ecount = jsonObj.config.emails.email.size()
 println("No of users "+ ecount)
-  
+  def indiv = new String[100]
 def count = new String[100]
-	 List<String> JSON = new ArrayList<String>();
+	
 	//var Dispatch = new Dispatch();
 
 
@@ -50,7 +50,8 @@ def count = new String[100]
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
-	 
+	 indiv[i]=0
+	  List<String> JSON = new ArrayList<String>();
   for(j=0;j<result;j++)
   {
 	 
@@ -68,17 +69,19 @@ for(i=0;i<ecount;i++)
 
 	  JSON.add(JsonOutput.toJson(resultJson[j]))
    }
+	  indiv[i]=JSON
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	
  }
 	//println(Dispatch)
-	println(JSON)
-	writeFile file: 'output.json', text: "{ \
+	for(int i=0;i<ecount;i++)
+	println(indiv[i])
+	/*writeFile file: 'output.json', text: "{ \
 	\"No of Commits\":\"${result}\",\n \
 	\"commit-details\":\"${resultJson}\",\n \
 	\"user-commits\":\"${JSON}\",\n \
-					     }"
+					     }"*/
 	//writeFile file: 'output.json', text: "{\"commit-details\":\"${resultJson}\"" 
 	
 	
