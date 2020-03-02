@@ -1,17 +1,17 @@
 import groovy.json.*
-	public class Container
+	def Container()
 	{
-		public string ContainerId { get; set; }
-		public string ContainerName { get; set; }
+		string ContainerId { get; set; }
+		string ContainerName { get; set; }
 	}
 
-public class Dispatch
+def Dispatch()
 	{
-		public Dispatch()
+		Dispatch()
 		{
 			Container = new List<Container>();
 		}
-		public List<Container> Container { get; set; }
+		List<Container> Container { get; set; }
 	}
      
 def call(jsondata){
