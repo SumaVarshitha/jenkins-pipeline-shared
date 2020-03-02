@@ -40,7 +40,7 @@ def resultJson = jsonSlurper.parse(reader)
 print "total no.of commits:" +result
    int ecount = jsonObj.config.emails.email.size()
 println("No of users "+ ecount)
-  def indiv = new String[100]
+  String indiv = new String[100]
 def count = new String[100]
 	//def v
 	
@@ -73,7 +73,7 @@ for(i=0;i<ecount;i++)
 	 
 	 // v=JSON
   }
-	 indiv >> JSON
+	 indiv[i]= "-- $JSON"
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
  }
