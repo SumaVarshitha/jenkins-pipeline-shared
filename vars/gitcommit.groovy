@@ -73,7 +73,7 @@ for(i=0;i<ecount;i++)
 	 
 	 // v=JSON
   }
-	 indiv[i]= "${JSON}".tostring()
+	 indiv[i]= "${JSON}".toString()
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	print(JSON)
  }
