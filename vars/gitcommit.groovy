@@ -72,7 +72,7 @@ for(i=0;i<ecount;i++)
 	  indiv[i]=JSON
   }
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
-	
+	print(JSON)
  }
 	//println(Dispatch)
 	for(int i=0;i<ecount;i++)
