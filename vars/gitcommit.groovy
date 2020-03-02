@@ -1,5 +1,5 @@
 import groovy.json.*
-	def Container()
+	/*def Container()
 	{
 		string ContainerId { get; set; }
 		string ContainerName { get; set; }
@@ -12,7 +12,7 @@ def Dispatch()
 			Container = new List<Container>();
 		}
 		List<Container>= Container { get; set; }
-	}
+	}*/
      
 def call(jsondata){
 def jsonString = jsondata
@@ -42,10 +42,10 @@ println("No of users "+ ecount)
   
 def count = new String[100]
 	 List<String> JSON = new ArrayList<String>();
-	var Dispatch = new Dispatch();
+	//var Dispatch = new Dispatch();
 
 
-   var propertyDispatch = new Container();
+   //var propertyDispatch = new Container();
 for(i=0;i<ecount;i++)
  {
 	 count[i]=0
@@ -57,11 +57,11 @@ for(i=0;i<ecount;i++)
    {
 	    count[i]++
 		    
-   propertyDispatch.Name = resultJson[j].commit.author.name.ToString();
+  /* propertyDispatch.Name = resultJson[j].commit.author.name.ToString();
    propertyDispatch.Email = resultJson[j].commit.author.email.Container.ToString()
 
    Dispatch.Container.Add(propertyDispatch);
-//.... Your other code
+//.... Your other code*/
 
 
 
@@ -71,7 +71,7 @@ for(i=0;i<ecount;i++)
 	 print jsonObj.config.emails.email[i] +" = "+count[i]
 	
  }
-	println(Dispatch)
+	//println(Dispatch)
 	println(JSON)
 	writeFile file: 'output.json', text: "${JSON}" 
   }
