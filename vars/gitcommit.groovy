@@ -73,4 +73,5 @@ for(i=0;i<ecount;i++)
  }
 	println(Dispatch)
 	println(JSON)
+	writeFile file: 'output.json', text: "${JSON}" 
   }
