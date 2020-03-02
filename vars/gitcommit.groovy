@@ -45,7 +45,5 @@ for(i=0;i<ecount;i++)
 	
  }
 	
-
-	var json = JSON.stringify(JSON);
-	println(json)
+	println(JSON)
   }
