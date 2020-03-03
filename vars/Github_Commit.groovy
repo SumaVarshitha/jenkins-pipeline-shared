@@ -5,8 +5,8 @@ import groovy.json.JsonSlurper
 def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
-      int ecount = jsonObj.config.emails.email.size()
-         println("No of users "+ ecount)
+      int ecnt = jsonObj.config.emails.email.size()
+         println("No of users "+ ecnt)
       String a=jsonObj.scm.repositories.repository.repo_name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
 
@@ -19,14 +19,14 @@ String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
 def resultJson = jsonSlurper.parse(reader)
 def totalcommits = resultJson.size()
       println(totalcommits)
-	println(ecount)
+	println(ecnt)
       println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
-   	 List<String> LIST = new ArrayList<String>();
-	 List<String> LIST1 = new ArrayList<String>();
+   	 List<String> COMMIT = new ArrayList<String>();
+	 List<String> LIST = new ArrayList<String>();
 
 	 def jsonBuilder = new groovy.json.JsonBuilder()
-for(i=0;i<ecount;i++)
+for(i=0;i<ecnt;i++)
  {
 	def email=jsonObj.config.emails.email[i] 
   for(j=0;j<totalcommits;j++)
@@ -36,13 +36,12 @@ for(i=0;i<ecount;i++)
    if(email==resultJson[j].commit.author.email)
    {
 	   JSON.add(resultJson[j])
-	 // JSON.add(resultJson[j])
      }
      }
 	// println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
-	 LIST1[i]=JSON.clone()
-	 LIST.add(["email":email,"Commit": LIST1[i],"Commit_cnt":cnt])
+	 LIST[i]=JSON.clone()
+	 COMMIT.add(["email":email,"Commit": LIST[i],"Commit_cnt":cnt])
 	//LIST.add(["email":email,"Commit":JSON,"Commit_cnt":cnt])
 	 //JCOPY[i]=(JsonOutput.toJson(JSON))
 	// println(JCOPY[i])
@@ -58,9 +57,9 @@ for(i=0;i<ecount;i++)
  jsonBuilder.gitlab(
   "total_commit" : resultJson,
   "commit_cnt" : resultJson.size(),
-	 "individual_commit_Details":LIST
+	 "individual_commit_Details":COMMIT
   
   )
-File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output.json")
 	file.write(jsonBuilder.toPrettyString())
 }
