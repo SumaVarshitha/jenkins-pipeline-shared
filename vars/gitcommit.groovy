@@ -81,12 +81,20 @@ for(i=0;i<ecount;i++)
 	//println(Dispatch)
 	
 	println(indiv[i])
+	for(int i=0;i<ecount;i++) 
+	{ if(i==0)
+	 {
 	writeFile file: 'output.json', text: "{ \
 	\"No of Commits\":\"${result}\",\n \
 	\"commit-details\":\"${resultJson}\",\n \
-	for(int i=0;i<ecount;i++) \
+	
 	\"user-commits\":\"${indiv[i]}\",\n \
-					     }"
+	 }"}
+	 else{
+		writeFile file: 'output.json', text: "{ \
+	 \"user-commits\":\"${indiv[i]}\",\n \
+	 }"
+	}}
 	//writeFile file: 'output.json', text: "{\"commit-details\":\"${resultJson}\"" 
 	
 	
