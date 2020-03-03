@@ -29,7 +29,7 @@ def totalcommits = resultJson.size()
 for(i=0;i<ecount;i++)
  {
 	def email=jsonObj.config.emails.email[i] 
-  for(j=0;j<total;j++)
+  for(j=0;j<totalcommits;j++)
   {
 	 // println(jsonObj.config.emails.email[i])
 	 // println(resultJson[j].commit.author.email)
