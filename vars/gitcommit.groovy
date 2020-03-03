@@ -93,7 +93,7 @@ for(i=0;i<ecount;i++)
 	}
 	 else{
 		writeFile file: 'output.json', text: "{ \
-	 \"user-commits\":\"${indiv[i]}\",\n \
+	 \"user-commits\":\"${indiv[i]}\".append("output.json"),\n \
 	 }"
 	}
 	}
