@@ -84,7 +84,7 @@ for(i=0;i<ecount;i++)
 	writeFile file: 'output.json', text: "{ \
 	\"No of Commits\":\"${result}\",\n \
 	\"commit-details\":\"${resultJson}\",\n \
-	for(int i=0;i<ecount;i++) 
+	for(int i=0;i<ecount;i++) \
 	\"user-commits\":\"${indiv[i]}\",\n \
 					     }"
 	//writeFile file: 'output.json', text: "{\"commit-details\":\"${resultJson}\"" 
