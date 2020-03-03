@@ -56,7 +56,7 @@ for(i=0;i<ecnt;i++)
     */
  jsonBuilder.GITHUB(
   "total_commits" : resultJson,
-  "commit_count" : resultJson.size(),
+  "commits_count" : resultJson.size(),
 	 "individual_commit_Details":COMMIT
   
   )
