@@ -41,7 +41,7 @@ for(i=0;i<ecnt;i++)
 	// println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
 	 LIST[i]=JSON.clone()
-	 COMMIT.add(["email":email,"Commit": LIST[i],"Commit_cnt":cnt])
+	 COMMIT.add(["User_email":email,"User_Commits": LIST[i],"User_Commits_count":cnt])
 	//LIST.add(["email":email,"Commit":JSON,"Commit_cnt":cnt])
 	 //JCOPY[i]=(JsonOutput.toJson(JSON))
 	// println(JCOPY[i])
@@ -54,9 +54,9 @@ for(i=0;i<ecnt;i++)
 		println(JCOPY[i])
 	}
     */
- jsonBuilder.gitlab(
-  "total_commit" : resultJson,
-  "commit_cnt" : resultJson.size(),
+ jsonBuilder.GITHUB(
+  "total_commits" : resultJson,
+  "commit_count" : resultJson.size(),
 	 "individual_commit_Details":COMMIT
   
   )
