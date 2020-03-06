@@ -17,4 +17,6 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
    int result=resultJson.number.size()
 print "total no.of pull requests:" +result
-  }
+  
+return result
+}
