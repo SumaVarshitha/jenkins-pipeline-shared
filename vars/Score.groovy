@@ -25,7 +25,7 @@ name="GITHUB"
   {
     score=score+10
   }
-      }
+      
       JSON.add(["TeamName":"digital_rig","Tool":name,"Score":score])  
    if(k==1){
  def num=jsonObj1.GITHUB.individual_commit_Details.size();
@@ -41,6 +41,8 @@ name="GITHUB"
   k=0
             }
             }
+}
+  }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
   "Scores" : JSON
