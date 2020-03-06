@@ -47,7 +47,7 @@ name="GITHUB"
   }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
- "Team_Name":team
+ "Team_Name":team,
   "Scores" : JSON
   
 ) 
