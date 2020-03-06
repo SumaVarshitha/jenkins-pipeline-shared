@@ -27,7 +27,7 @@ name="GITHUB"
   }
       }
       JSON.add(["TeamName":"digital_rig","Tool":name,"Score":score])  
-   if(k=1){
+   if(k==1){
  def num=jsonObj1.GITHUB.individual_commit_Details.size();
  for(i=0;i<num;i++){
   int scorei=0
