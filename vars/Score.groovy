@@ -28,7 +28,7 @@ name="GITHUB"
     score=score+10
   }*/
       
-      JSON.add(["Tool":name,"Metrics":metric,"Value":cnt])  
+      JSON.add(["Tool":name,"Metric_name":metric,"Value":cnt])  
    /*if(k==1){
  def num=jsonObj1.GITHUB.individual_commit_Details.size();
  for(i=0;i<num;i++){
@@ -48,7 +48,7 @@ name="GITHUB"
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
  "Team_Name":team,
-  "Scores" : JSON
+  "Metrics" : JSON
   
 ) 
   
