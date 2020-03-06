@@ -2,7 +2,7 @@ import groovy.json.*
 
 def call(jasondata,github){
  // print github
- def k=1
+// def k=1
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
@@ -17,17 +17,18 @@ List<String> jsonString1= new ArrayList<String>();
 if(jsonString1[i].contains("GITHUB"))
 {
 name="GITHUB"
+ def metric="commit"
         def jsonObj1= readJSON text: jsonString1[i]
   //println(jsonObj)
   def cnt =jsonObj1.GITHUB.commits_count
    // println(cnt)
-   if(cnt>5)
+   /*if(cnt>5)
   {
     score=score+10
-  }
+  }*/
       
-      JSON.add(["TeamName":"digital_rig","Tool":name,"Score":score])  
-   if(k==1){
+      JSON.add(["Tool":name,"Metrics":metric,"Value":cnt])  
+   /*if(k==1){
  def num=jsonObj1.GITHUB.individual_commit_Details.size();
  for(i=0;i<num;i++){
   int scorei=0
@@ -41,7 +42,7 @@ name="GITHUB"
   k=0
             }
             }
-}
+}*/
   }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
