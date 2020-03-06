@@ -1,6 +1,6 @@
 import groovy.json.*
 
-def call(jasondata,github){
+def call(jasondata,github,pullreq){
  // print github
 // def k=1
 def jsonString = jsondata
@@ -18,7 +18,8 @@ List<String> jsonString1= new ArrayList<String>();
 if(jsonString1[i].contains("GITHUB"))
 {
 name="GITHUB"
- def metric="commit"
+ def metric="commits"
+ def metric1="pull requests"
         def jsonObj1= readJSON text: jsonString1[i]
   //println(jsonObj)
   def cnt =jsonObj1.GITHUB.commits_count
@@ -29,6 +30,7 @@ name="GITHUB"
   }*/
       
       JSON.add(["Tool":name,"Metric_name":metric,"Value":cnt])  
+  JSON.add(["Tool":name,"Metric_name":metric1,"Value":pullreq])
    /*if(k==1){
  def num=jsonObj1.GITHUB.individual_commit_Details.size();
  for(i=0;i<num;i++){
@@ -45,6 +47,7 @@ name="GITHUB"
             }*/
 }
   }
+ 
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
  "Team_Name":team,
