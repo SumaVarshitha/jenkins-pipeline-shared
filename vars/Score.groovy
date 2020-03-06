@@ -6,6 +6,7 @@ def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
 List<String> jsonString1= new ArrayList<String>();
   jsonString1.add(github)
+  print jsonString1
   List<String> JSON = new ArrayList<String>();
   for(i=0;i<jsonString1.size();i++)
   { 
