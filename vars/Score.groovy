@@ -1,6 +1,7 @@
 import groovy.json.*
 
 def call(jasondata,github){
+  print github
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
