@@ -32,7 +32,7 @@ name="GITHUB"
  for(i=0;i<num;i++){
   int scorei=0
   def cnt1=jsonObj1.GITHUB.individual_commit_Details[i].User_Commits_count
-  if(cnt1>5)
+  if(cnt1>2)
   {
     scorei=scorei+10
   }
