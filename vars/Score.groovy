@@ -4,19 +4,19 @@ def call(jasondata,github){
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
-List<String> jsonString= new ArrayList<String>();
-  jsonString.add(github)
+List<String> jsonString1= new ArrayList<String>();
+  jsonString1.add(github)
   List<String> JSON = new ArrayList<String>();
-  for(i=0;i<jsonString.size();i++)
+  for(i=0;i<jsonString1.size();i++)
   { 
     int score=0
     String name="  "
-if(jsonString[i].contains("GITHUB"))
+if(jsonString1[i].contains("GITHUB"))
 {
 name="GITHUB"
-        def jsonObj= readJSON text: jsonString[i]
+        def jsonObj1= readJSON text: jsonString1[i]
   //println(jsonObj)
-  def cnt =jsonObj.GITHUB.commit_count
+  def cnt =jsonObj1.GITHUB.commit_count
    // println(cnt)
    if(cnt>5)
   {
