@@ -6,6 +6,7 @@ def call(jasondata,github){
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
+ def team=jsonObj.riglet_info.name
 List<String> jsonString1= new ArrayList<String>();
   jsonString1.add(github)
  // print jsonString1
@@ -46,6 +47,7 @@ name="GITHUB"
   }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
+ "Team_Name":team
   "Scores" : JSON
   
 ) 
