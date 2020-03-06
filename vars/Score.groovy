@@ -42,8 +42,8 @@ name="GITHUB"
   JSON.add(["User_Email":email,"Tool":name,"Score":scorei])
   k=0
             }
-            }
-}*/
+            }*/
+}
   }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
