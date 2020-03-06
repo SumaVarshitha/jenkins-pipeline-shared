@@ -26,7 +26,20 @@ name="GITHUB"
   }
       }
       JSON.add(["TeamName":"digital_rig","Tool":name,"Score":score])  
+   if(k=1){
+ def num=jsonObj1.GITHUB.individual_commit_Details.size();
+ for(i=0;i<num;i++){
+  int scorei=0
+  def cnt1=jsonObj1.GITHUB.individual_commit_Details[i].User_Commits_count
+  if(cnt1>5)
+  {
+    scorei=scorei+10
   }
+  def email=jsonObj1.GITHUB.individual_commit_Details[i].User_email
+  JSON.add(["User_Email":email,"Tool":name,"Score":scorei])
+  k=0
+            }
+            }
 def jsonBuilder = new groovy.json.JsonBuilder()
 jsonBuilder(
   "Scores" : JSON
