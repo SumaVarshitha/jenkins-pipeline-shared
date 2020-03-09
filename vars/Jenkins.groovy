@@ -108,7 +108,7 @@ def resultJson = jsonSlurper.parse(reader)
    }
   }
 	
-		    jsonBuilder.JENKINS(
+		    jsonBuilder.Jenkins(
   
   "teambuild_cnt" : value,
   "teambuilds" : resultJson,		    
