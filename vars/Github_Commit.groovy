@@ -2,18 +2,21 @@ import groovy.json.*
 import groovy.json.JsonSlurper 
 //int ids1;
 
-def call(jsondata){
+def call(jsondata,rig){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
       int ecnt = jsonObj.config.emails.email.size()
          println("No of users "+ ecnt)
       String a=jsonObj.scm.repositories.repository.repo_name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
+	def jsonObja = readJSON text: rig
+	def IP=jsonObja.url
+	def user=jsonObja.userName
+	def pass=jsonObja.password
 
  println(repoName)
-     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'password', usernameVariable:'username')]) {
-      sh "curl -X GET    -u $username:$password https://api.github.com/repos/SumaVarshitha/${repoName}/commits -o commits.json"
-     }
+     
+	sh "curl -X GET    -u $user:$pass ${IP}/repos/SumaVarshitha/${repoName}/commits -o commits.json"
    def jsonSlurper = new JsonSlurper()
  def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/commits.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
