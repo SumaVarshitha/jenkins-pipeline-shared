@@ -16,7 +16,7 @@ String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
 
  println(repoName)
      
-	sh "curl -X GET    -u $user:$pass ${IP}/repos/SumaVarshitha/${repoName}/commits -o commits.json"
+	sh "curl -X GET    -u $user:$pass ${IP}/repos/${user}/${repoName}/commits -o commits.json"
    def jsonSlurper = new JsonSlurper()
  def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/commits.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
